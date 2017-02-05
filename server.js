@@ -2,8 +2,8 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
-var port = 3000;
-var ipaddr = 'localhost';
+var port = process.env.PORT || 3000;
+// var ipaddr = 'localhost';
 
 app.use(bodyParser.json()); //for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); //for parsin
